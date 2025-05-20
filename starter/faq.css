@@ -1,0 +1,90 @@
+/* FAQ & Survey styles */
+
+.faq-container {
+  max-width: 900px;
+  margin: 40px auto 60px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #1c7294; /* your nav color */
+}
+
+.faq-container h1, 
+.faq-container h2 {
+  color: #1c7294;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+details {
+  margin-bottom: 18px;
+  border: 1px solid #1c7294;
+  border-radius: 8px;
+  padding: 10px 20px;
+  background-color: #e3f0f7;
+  cursor: pointer;
+}
+
+summary {
+  font-weight: 700;
+  font-size: 18px;
+  outline: none;
+}
+
+details[open] {
+  background-color: #c0d6e8;
+}
+
+details p {
+  margin-top: 10px;
+  color: #333;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* Survey section */
+
+.survey-section {
+  margin-top: 40px;
+  color: #1c7294;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #1c7294;
+  color: white;
+  font-weight: 700;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #145a76;
+}
+
+nav a {
+  color: white !important;
+}

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FAQs - Cyber Security for Seniors</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    /* FAQ specific styles */
+    body {
+      background-color: white;
+      color: #333;
+      font-family: Arial, sans-serif;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1, h2 {
+      color: #1c7294;
+      font-weight: bold;
+    }
+    details {
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 12px 15px;
+      background: #f9f9f9;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+    }
+    details[open] {
+      background: #e1f0fb;
+      border-color: #1c7294;
+      box-shadow: 0 2px 6px rgb(28 114 148 / 0.4);
+    }
+    summary {
+      font-size: 18px;
+      font-weight: 600;
+      outline: none;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    summary::before {
+      content: "► ";
+      font-size: 16px;
+      transition: transform 0.3s ease;
+      display: inline-block;
+      margin-right: 6px;
+    }
+    details[open] summary::before {
+      content: "▼ ";
+    }
+    form {
+      margin-top: 40px;
+      background: #f9f9f9;
+      padding: 20px 25px;
+      border-radius: 8px;
+      box-shadow: 0 1px 5px rgb(0 0 0 / 0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #1c7294;
+    }
+    select, textarea {
+      width: 100%;
+      max-width: 500px;
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      resize: vertical;
+    }
+    button {
+      background-color: #1c7294;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #145a76;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #007bff;">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="index.html">
+        <img src="Logo1.webp" alt="Logo" width="40" height="39" class="d-inline-block align-text-middle" />
+        Cyber Security for Seniors
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-white active" href="faq.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="https://chat.openai.com" target="_blank">Chatbot</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN content with FAQs -->
+  <main>
+    <h1>Frequently Asked Questions (FAQs)</h1>
+    
+    <section>
+      <h2>General Questions</h2>
+
+      <details>
+        <summary>What is cybersecurity?</summary>
+        <p>Cybersecurity is the practice of protecting systems, networks, and programs from digital attacks...</p>
+      </details>
+
+      <details>
+        <summary>Why is cybersecurity important for seniors?</summary>
+        <p>Seniors are often targeted by scammers due to less familiarity with technology...</p>
+      </details>
+
+      <details>
+        <summary>How can I recognize a phishing email?</summary>
+        <p>Phishing emails often contain urgent requests, suspicious links, poor spelling/grammar...</p>
+      </details>
+
+      <details>
+        <summary>What should I do if I suspect fraud or identity theft?</summary>
+        <p>Immediately report it to your bank, local authorities, and monitor your accounts...</p>
+      </details>
+
+      <details>
+        <summary>How can I create strong passwords?</summary>
+        <p>Use a mix of uppercase, lowercase, numbers, and special characters...</p>
+      </details>
+
+      <details>
+        <summary>What is two-factor authentication (2FA) and should I use it?</summary>
+        <p>2FA adds an extra layer of security by requiring two types of verification...</p>
+      </details>
+    </section>
+
+    <section style="margin-top: 50px;">
+      <h2>Quick Survey</h2>
+      <form>
+        <label for="satisfaction">How helpful did you find this website?</label>
+        <select id="satisfaction" name="satisfaction" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="very_helpful">Very helpful</option>
+          <option value="somewhat_helpful">Somewhat helpful</option>
+          <option value="not_helpful">Not helpful</option>
+        </select>
+
+        <label for="comments">Any comments or suggestions?</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Your feedback here..."></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center mt-5">
+    <p>&copy; 2025 Cyber Security for Seniors. All rights reserved.</p>
+    <nav class="navbar navbar-dark" style="background-color: #007bff;">
+      <div class="container">
+        <a href="banking.html" class="btn btn-link text-white">Banking</a>
+        <a href="social_media.html" class="btn btn-link text-white">Social Media</a>
+        <a href="shopping.html" class="btn btn-link text-white">Shopping</a>
+        <a href="travel.html" class="btn btn-link text-white">Travel</a>
+        <a href="phone.html" class="btn btn-link text-white">Phone</a>
+        <a href="insurance.html" class="btn btn-link text-white">Insurance</a>
+      </div>
+    </nav>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Social Media - Cyber Security for Seniors</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #007bff;">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="index.html">
+                <img src="Logo1.webp" alt="Logo" width="40" height="39" class="d-inline-block align-text-middle" />
+                Cyber Security for Seniors
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="faq.html">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="https://chat.openai.com" target="_blank">Chatbot</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section for Social Media Cybersecurity -->
+    <section style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; padding: 40px;">
+        <div style="flex: 1; min-width: 300px; padding-right: 20px; font-size: 18px;">
+            <h2>Staying Safe on Social Media for Seniors</h2>
+            <p>
+                Social media can be fun and a great way to stay connected, but it also comes with risks.
+                Here are important tips to keep your accounts secure:
+            </p>
+            <ul>
+                <li>Use strong, unique passwords for each social media account.</li>
+                <li>Enable two-factor authentication where possible.</li>
+                <li>Be cautious about what personal information you share publicly.</li>
+                <li>Don’t accept friend requests from people you don’t know.</li>
+                <li>Regularly check your privacy settings and update them.</li>
+            </ul>
+        </div>
+
+        <div style="flex: 1; min-width: 300px;">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/Jw3piysy2C0" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+
+
+        </div>
+    </section>
+
+    <!-- Image and Interactive Question Section -->
+    <section style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 40px;">
+        <div style="flex: 1; min-width: 300px; text-align: center; font-size: 20px;">
+           <img src="socialmedia.png" alt="Social Media Visual" style="width: 100%; max-width: 600px; border-radius: 8px;" />
+
+        </div>
+
+      <div class="interactive-question">
+            <h3>Test Your Knowledge:</h3>
+            <p><strong>Question:</strong> What should you NOT do to protect your social media account?</p>
+            <form onsubmit="event.preventDefault(); checkAnswer();">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question1" id="answer1" value="option1" />
+                    <label class="form-check-label" for="answer1">
+                        Share your password with friends.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question1" id="answer2" value="option2" />
+                    <label class="form-check-label" for="answer2">
+                        Use two-factor authentication.
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="question1" id="answer3" value="option3" />
+                    <label class="form-check-label" for="answer3">
+                        Check privacy settings regularly.
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary mt-2">Submit Answer</button>
+            </form>
+            <p id="result" class="mt-3"></p>
+        </div>
+    </section>
+
+    <!-- More Info Button -->
+    <div class="my-4 text-center">
+        <a href="https://www.cyber.gov.au/learn-basics/explore-basics/seniors" target="_blank" class="btn btn-info">More Information on Social Media Safety</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5">
+        <p>&copy; 2025 Cyber Security for Seniors. All rights reserved.</p>
+        <nav class="navbar navbar-dark" style="background-color: #007bff;">
+            <div class="container">
+                <a href="banking.html" class="btn btn-link text-white">Banking</a>
+                <a href="shopping.html" class="btn btn-link text-white">Shopping</a>
+                <a href="travel.html" class="btn btn-link text-white">Travel</a>
+                <a href="phone.html" class="btn btn-link text-white">Phone</a>
+                <a href="insurance.html" class="btn btn-link text-white">Insurance</a>
+            </div>
+        </nav>
+    </footer>
+
+    <script>
+        function checkAnswer() {
+            const answer1 = document.getElementById('answer1');
+            const result = document.getElementById('result');
+
+            if (answer1.checked) {
+                result.textContent = "Correct! Never share your password with anyone to keep your account safe.";
+                result.style.color = 'green';
+            } else {
+                result.textContent = "Wrong, try again. The correct answer is that you should never share your password with friends.";
+                result.style.color = 'red';
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

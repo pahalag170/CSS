@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Cyber Security for Seniors</title>
+    <link href="styles.css" rel="stylesheet">
+    <style>
+      nav {
+        background-color: rgba(0, 123, 247, 0.4);padding: 10px 0;       
+        }
+      footer {
+        background-color: rgba(0, 123, 247, 0.4); padding: 10px 0;
+      }   
+    </style>
+  </head>
+  <body>
+ 
+    <nav>
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+        <a href="#" style="color: white; text-decoration: none; font-size: 20px; font-weight: bold;">
+          <img src="Logo1.webp" alt="Logo" width="40" height="39" style="vertical-align: middle;">
+          Cyber Security for Seniors
+        </a>
+        <ul style="list-style: none; display: flex; gap: 15px; margin: 0; padding: 0;">
+          <li><a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Home</a></li>
+          <li><a href="about.html" style="color: white; text-decoration: none; font-weight: bold;">About</a></li>
+          <li><a href="contact.html" style="color: white; text-decoration: none; font-weight: bold;">Contact</a></li>
+          <li><a href="faq.html" style="color: white; text-decoration: none; font-weight: bold;">FAQs</a></li>
+          <li><a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-weight: bold;">Chatbot</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="carousel">
+      <div class="carousel-item">
+        <img src="carouselimg1.jpg" alt="Slide 1">
+      </div>
+      <div class="carousel-item">
+        <img src="carouselimg2.jpg" alt="Slide 2">
+      </div>
+      <div class="carousel-item">
+        <img src="carouselimg3.jpg" alt="Slide 3">
+      </div>
+      <button id="prev" class="arrow">&#9664;</button> <!-- Left Arrow -->
+      <button id="next" class="arrow">&#9654;</button> <!-- Right Arrow -->
+    </div>
+
+    <div class="buttons-section">
+      <a href="banking.html"><button>🏦 Banking</button></a>
+      <a href="social_media.html"><button>📱 Social Media</button></a>
+      <a href="shopping.html"><button>🛒 Shopping</button></a>
+      <a href="travel.html"><button>✈️ Travel</button></a>
+      <a href="phone.html"><button>📞 Phone</button></a>
+      <a href="insurance.html"><button>🛡️ Insurance</button></a>
+    </div>
+    
+<footer>
+  <div style="display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap;">
+    <a href="banking.html" style="color: white; text-decoration: underline; padding: 10px;">Banking</a>
+    <a href="social_media.html" style="color: white; text-decoration: underline; padding: 10px;">Social Media</a>
+    <a href="shopping.html" style="color: white; text-decoration: underline; padding: 10px;">Shopping</a>
+    <a href="phone.html" style="color: white; text-decoration: underline; padding: 10px;">Phone</a>
+    <a href="travel.html" style="color: white; text-decoration: underline; padding: 10px;">Travel</a>
+    <a href="insurance.html" style="color: white; text-decoration: underline; padding: 10px;">Insurance</a>
+  </div>
+</footer>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          let currentIndex = 0;
+          const items = document.querySelectorAll(".carousel-item img");
+          const totalItems = items.length;
+          const prevButton = document.getElementById("prev");
+          const nextButton = document.getElementById("next");
+
+          // Function to show the current image
+          function showImage(index) {
+              items.forEach((img, i) => {
+                  img.style.display = i === index ? "block" : "none";
+              });
+          }
+
+          // Show the first image initially
+          showImage(currentIndex);
+
+          // Event listener for next button
+          nextButton.addEventListener("click", function () {
+              currentIndex = (currentIndex + 1) % totalItems;
+              showImage(currentIndex);
+          });
+
+          // Event listener for previous button
+          prevButton.addEventListener("click", function () {
+              currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+              showImage(currentIndex);
+          });
+
+          // Auto-slide functionality
+          setInterval(() => {
+              currentIndex = (currentIndex + 1) % totalItems;
+              showImage(currentIndex);
+          }, 3000); // Change image every 3 seconds
+      });
+    </script>
+  </body>
+</html>
